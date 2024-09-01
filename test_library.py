@@ -48,12 +48,12 @@ def test_add_multiple_unique_books(isbn, title, author, publication_year):
     library.add_books(book)
     assert library.books[isbn] == book
 
-# def test_borrow_book():
-#     library = Library()
-#     book1 = Book(1234, "Two states", "Chetan Bhagat", "2010")
-#     library.add_books(book1)
-#     library.borrow_books(book1.isbn)
-#     assert not library.books[book1.isbn].available
+def test_borrow_book():
+    library = Library()
+    book1 = Book(1234, "Two states", "Chetan Bhagat", "2010")
+    library.add_books(book1)
+    library.borrow_books(book1.isbn)
+    assert not library.books[book1.isbn].available
    
 # def test_borrow_book_not_available():
 #     library = Library()
