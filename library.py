@@ -54,13 +54,13 @@ class Library:
             print("No books are available.")
  
     
-# library = Library()
+library = Library()
 
-# book1 = Book(1234, "Two states", "Chetan Bhagat", "2010")
+book1 = Book(1234, "Two states", "Chetan Bhagat", "2010")
 
-# library.add_books(book1)
-# library.view_available_books()
-# library.available_books()
+library.add_books(book1)
+library.view_available_books()
+library.available_books()
 
             
         
