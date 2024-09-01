@@ -41,19 +41,19 @@ class Library:
         else:
             raise Exception("Book was not borrowed")
     
-#     def available_books(self):
+    def available_books(self):
         
-#         return [book for book in self.books.values() if book.available]
+        return [book for book in self.books.values() if book.available]
     
-#     def view_available_books(self):
+    def view_available_books(self):
         
-#         available_books = self.available_books()
-#         if available_books:
-#             print("Available books in the library:")
-#             for book in available_books:
-#                 print(f"Book is {book.title} by {book.author} and ISBN: {book.isbn}")
-#         else:
-#             print("No books are available.")
+        available_books = self.available_books()
+        if available_books:
+            print("Available books in the library:")
+            for book in available_books:
+                print(f"Book is {book.title} by {book.author} and ISBN: {book.isbn}")
+        else:
+            print("No books are available.")
     
 # library = Library()
 
