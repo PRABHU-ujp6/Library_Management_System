@@ -22,20 +22,20 @@ def test_add_book_missing_info():
         Book(846, "Anonymous Book", "Author UJP")
 
 
-# def test_add_multiple_books():
-#     library = Library()
-#     book1 = Book("1234567890", "The Great Gatsby", "F. Scott Fitzgerald", 1925)
-#     book2 = Book("0987654321", "To Kill a Mockingbird", "Harper Lee", 1960)
-#     book3 = Book("1122334455", "1984", "George Orwell", 1949)
-#     library.add_books(book1)
-#     library.add_books(book2)
-#     library.add_books(book3)
+def test_add_multiple_books():
+    library = Library()
+    book1 = Book("1234567890", "The Great Gatsby", "F. Scott Fitzgerald", 1925)
+    book2 = Book("0987654321", "To Kill a Mockingbird", "Harper Lee", 1960)
+    book3 = Book("1122334455", "1984", "George Orwell", 1949)
+    library.add_books(book1)
+    library.add_books(book2)
+    library.add_books(book3)
     
-#     assert len(library.books) == 3
+    assert len(library.books) == 3
     
-#     assert library.books["1234567890"].title == "The Great Gatsby"
-#     assert library.books["0987654321"].title == "To Kill a Mockingbird"
-#     assert library.books["1122334455"].title == "1984"
+    assert library.books["1234567890"].title == "The Great Gatsby"
+    assert library.books["0987654321"].title == "To Kill a Mockingbird"
+    assert library.books["1122334455"].title == "1984"
     
 # @pytest.mark.parametrize("isbn, title, author, publication_year", [
 #     ("1111111111", "Book One", "Author A", 2000),
