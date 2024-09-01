@@ -70,13 +70,13 @@ def test_borrow_nonexistent_book():
         library.borrow_books("XYZ Books") 
         
 
-# def test_borrow_invalid_isbn():
-#     library = Library()
-#     book1 = Book(1234, "Two states", "Chetan Bhagat", "2010")
-#     library.add_books(book1)
+def test_borrow_invalid_isbn():
+    library = Library()
+    book1 = Book(1234, "Two states", "Chetan Bhagat", "2010")
+    library.add_books(book1)
     
-#     with pytest.raises(ValueError):
-#         library.borrow_books("XYZ books")
+    with pytest.raises(ValueError):
+        library.borrow_books("XYZ books")
         
 # def test_borrow_book_multiple_times():
 #     library = Library()
