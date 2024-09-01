@@ -33,14 +33,14 @@ class Library:
         book.available = False
         print("Book borrowed successfully")
    
-#     def return_books(self, isbn):
+    def return_books(self, isbn):
         
-#         if isbn in self.books and not self.books[isbn].available:
-#             self.books[isbn].available = True
-#         elif isbn not in self.books:
-#             raise ValueError("Invalid ISBN : Book not Found.")
-#         else:
-#             raise Exception("Book was not borrowed")
+        if isbn in self.books and not self.books[isbn].available:
+            self.books[isbn].available = True
+        elif isbn not in self.books:
+            raise ValueError("Invalid ISBN : Book not Found.")
+        else:
+            raise Exception("Book was not borrowed")
     
 #     def available_books(self):
         
