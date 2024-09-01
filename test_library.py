@@ -121,19 +121,19 @@ def test_available_books_empty():
     available = library.available_books()
     assert available == []
     
-# def test_all_available_books():
-#     library = Library()
-#     book1 = Book(1234, "Two States", "Chetan Bhagat", 2010)
-#     book2 = Book(987654321, "To Kill a Mockingbird", "Harper Lee", 1960)
-#     book3 = Book(1122334455, "1984", "George Orwell", 1949)
-#     library.add_books(book1)
-#     library.add_books(book2)
-#     library.add_books(book3)
-#     book2.available = False
-#     all_available_books = library.available_books()
-#     assert book1 in all_available_books
-#     assert book3 in all_available_books
-#     assert book2 not in all_available_books
+def test_all_available_books():
+    library = Library()
+    book1 = Book(1234, "Two States", "Chetan Bhagat", 2010)
+    book2 = Book(987654321, "To Kill a Mockingbird", "Harper Lee", 1960)
+    book3 = Book(1122334455, "1984", "George Orwell", 1949)
+    library.add_books(book1)
+    library.add_books(book2)
+    library.add_books(book3)
+    book2.available = False
+    all_available_books = library.available_books()
+    assert book1 in all_available_books
+    assert book3 in all_available_books
+    assert book2 not in all_available_books
     
 # def test_view_available_books_borrowed():
 #     library = Library()
