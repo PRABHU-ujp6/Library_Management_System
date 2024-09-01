@@ -55,13 +55,13 @@ def test_borrow_book():
     library.borrow_books(book1.isbn)
     assert not library.books[book1.isbn].available
    
-# def test_borrow_book_not_available():
-#     library = Library()
-#     book1 = Book(1234, "Two states", "Chetan Bhagat", "2010")
-#     library.add_books(book1)
-#     library.borrow_books(book1.isbn)
-#     with pytest.raises(Exception):
-#         library.borrow_books("XYZ Books") 
+def test_borrow_book_not_available():
+    library = Library()
+    book1 = Book(1234, "Two states", "Chetan Bhagat", "2010")
+    library.add_books(book1)
+    library.borrow_books(book1.isbn)
+    with pytest.raises(Exception):
+        library.borrow_books("XYZ Books") 
 
 # def test_borrow_nonexistent_book():
 #     library = Library()
