@@ -146,25 +146,25 @@ def test_view_available_books_borrowed():
     assert len(all_available_books) == 1
     assert book2 in all_available_books
 
-# def test_view_available_books_output(capfd):
-#     library = Library()
-#     book1 = Book(1234, "Two States", "Chetan Bhagat", 2010)
-#     book2 = Book(9876, "The Lord of the Rings", "J.R.R. Tolkien", 1954)
-#     library.add_books(book1)
-#     library.add_books(book2)
-#     library.view_available_books()
-#     out, err = capfd.readouterr()
-#     print("Captured output before borrowing:", out)
-#     assert "Available books in the library" in out
-#     assert f"{book1.title} by {book1.author} and ISBN: {book1.isbn}" in out
-#     assert f"{book2.title} by {book2.author} and ISBN: {book2.isbn}" in out 
-#     library.borrow_books(1234)
-#     assert not library.books[1234].available, "Book should be marked as borrowed"
-#     library.view_available_books()
-#     out, err = capfd.readouterr()
-#     print("Captured output after borrowing:", out)
-#     assert f"{book1.title} by {book1.author} and ISBN: {book1.isbn}" in out
-#     assert f"{book2.title} by {book2.author} and ISBN: {book2.isbn}" in out
+def test_view_available_books_output(capfd):
+    library = Library()
+    book1 = Book(1234, "Two States", "Chetan Bhagat", 2010)
+    book2 = Book(9876, "The Lord of the Rings", "J.R.R. Tolkien", 1954)
+    library.add_books(book1)
+    library.add_books(book2)
+    library.view_available_books()
+    out, err = capfd.readouterr()
+    print("Captured output before borrowing:", out)
+    assert "Available books in the library" in out
+    assert f"{book1.title} by {book1.author} and ISBN: {book1.isbn}" in out
+    assert f"{book2.title} by {book2.author} and ISBN: {book2.isbn}" in out 
+    library.borrow_books(1234)
+    assert not library.books[1234].available, "Book should be marked as borrowed"
+    library.view_available_books()
+    out, err = capfd.readouterr()
+    print("Captured output after borrowing:", out)
+    assert f"{book1.title} by {book1.author} and ISBN: {book1.isbn}" in out
+    assert f"{book2.title} by {book2.author} and ISBN: {book2.isbn}" in out
     
 # def test_borrow_and_return_multiple_books():
 #     library = Library()
