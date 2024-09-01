@@ -166,23 +166,23 @@ def test_view_available_books_output(capfd):
     assert f"{book1.title} by {book1.author} and ISBN: {book1.isbn}" in out
     assert f"{book2.title} by {book2.author} and ISBN: {book2.isbn}" in out
     
-# def test_borrow_and_return_multiple_books():
-#     library = Library()
-#     book1 = Book("1234567890", "The Great Gatsby", "F. Scott Fitzgerald", 1925)
-#     book2 = Book("0987654321", "To Kill a Mockingbird", "Harper Lee", 1960)
-#     book3 = Book("1122334455", "1984", "George Orwell", 1949)
-#     library.add_books(book1)
-#     library.add_books(book2)
-#     library.add_books(book3)
-#     library.borrow_books("1234567890")
-#     library.borrow_books("0987654321")
-#     available = library.available_books()
-#     assert len(available) == 1
-#     assert available[0].isbn == "1122334455"
-#     library.return_books("1234567890")
-#     available = library.available_books()
-#     assert len(available) == 2
-#     isbns_available = [book.isbn for book in available]
-#     assert "1234567890" in isbns_available
-#     assert "1122334455" in isbns_available
+def test_borrow_and_return_multiple_books():
+    library = Library()
+    book1 = Book("1234567890", "The Great Gatsby", "F. Scott Fitzgerald", 1925)
+    book2 = Book("0987654321", "To Kill a Mockingbird", "Harper Lee", 1960)
+    book3 = Book("1122334455", "1984", "George Orwell", 1949)
+    library.add_books(book1)
+    library.add_books(book2)
+    library.add_books(book3)
+    library.borrow_books("1234567890")
+    library.borrow_books("0987654321")
+    available = library.available_books()
+    assert len(available) == 1
+    assert available[0].isbn == "1122334455"
+    library.return_books("1234567890")
+    available = library.available_books()
+    assert len(available) == 2
+    isbns_available = [book.isbn for book in available]
+    assert "1234567890" in isbns_available
+    assert "1122334455" in isbns_available
     
