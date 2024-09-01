@@ -22,16 +22,16 @@ class Library:
             self.books[book.isbn] = book
             print("book added successfully.")       
         
-#     def borrow_books(self, isbn):
+    def borrow_books(self, isbn):
     
-#         if isbn not in self.books:
-#             raise ValueError(f"Book with ISBN {isbn} not found")
-#         book = self.books[isbn]
-#         if not book.available:
-#             raise ValueError("Book is already borrowed")
+        if isbn not in self.books:
+            raise ValueError(f"Book with ISBN {isbn} not found")
+        book = self.books[isbn]
+        if not book.available:
+            raise ValueError("Book is already borrowed")
         
-#         book.available = False
-#         print("Book borrowed successfully")
+        book.available = False
+        print("Book borrowed successfully")
 
     
 #     def return_books(self, isbn):
