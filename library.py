@@ -42,11 +42,9 @@ class Library:
             raise Exception("Book was not borrowed")
     
     def available_books(self): 
-        
         return [book for book in self.books.values() if book.available]
     
     def view_available_books(self):
-        
         available_books = self.available_books()
         if available_books:
             print("Available books in the library:")
