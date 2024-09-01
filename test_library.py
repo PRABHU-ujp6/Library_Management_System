@@ -17,9 +17,9 @@ def test_already_added():
         library.add_books(book2)
     
     
-# def test_add_book_missing_info():
-#     with pytest.raises(TypeError):
-#         Book(846, "Anonymous Book", "Author UJP")
+def test_add_book_missing_info():
+    with pytest.raises(TypeError):
+        Book(846, "Anonymous Book", "Author UJP")
 
 
 # def test_add_multiple_books():
