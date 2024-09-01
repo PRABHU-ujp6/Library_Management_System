@@ -135,16 +135,16 @@ def test_all_available_books():
     assert book3 in all_available_books
     assert book2 not in all_available_books
     
-# def test_view_available_books_borrowed():
-#     library = Library()
-#     book1 = Book("1234567890", "The Hitchhiker's Guide to the Galaxy", "Douglas Adams", 1979)
-#     book2 = Book("9876543210", "The Lord of the Rings", "J.R.R. Tolkien", 1954)
-#     library.add_books(book1)
-#     library.add_books(book2)
-#     library.borrow_books(book1.isbn)
-#     all_available_books = library.available_books()
-#     assert len(all_available_books) == 1
-#     assert book2 in all_available_books
+def test_view_available_books_borrowed():
+    library = Library()
+    book1 = Book("1234567890", "The Hitchhiker's Guide to the Galaxy", "Douglas Adams", 1979)
+    book2 = Book("9876543210", "The Lord of the Rings", "J.R.R. Tolkien", 1954)
+    library.add_books(book1)
+    library.add_books(book2)
+    library.borrow_books(book1.isbn)
+    all_available_books = library.available_books()
+    assert len(all_available_books) == 1
+    assert book2 in all_available_books
 
 # def test_view_available_books_output(capfd):
 #     library = Library()
