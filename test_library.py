@@ -94,13 +94,13 @@ def test_return_book():
     library.return_books(book1.isbn)
     assert library.books[book1.isbn].available
 
-# def test_return_book_not_borrowed():
-#     library = Library()
-#     book1 = Book(1234, "Two states", "Chetan Bhagat", "2010")
-#     library.add_books(book1)
-#     with pytest.raises(Exception):
-#         library.return_books(book1.isbn)
-#     assert "was not borrowed"
+def test_return_book_not_borrowed():
+    library = Library()
+    book1 = Book(1234, "Two states", "Chetan Bhagat", "2010")
+    library.add_books(book1)
+    with pytest.raises(Exception):
+        library.return_books(book1.isbn)
+    assert "was not borrowed"
     
 # def test_return_nonexistent_book():
 #     library = Library()
