@@ -8,13 +8,13 @@ def test_add_book():
     library.add_books(book1)
     assert len(library.books) == 1
 
-# def test_already_added():
-#     library = Library()
-#     book1 = Book(123, "The Hitchhiker's Guide to the Galaxy", "Douglas Adams", 1979)
-#     library.add_books(book1)
-#     book2 = Book(123, "My Will", "Louis Mark", 1980)
-#     with pytest.raises(Exception, match="Book already exists.."):
-#         library.add_books(book2)
+def test_already_added():
+    library = Library()
+    book1 = Book(123, "The Hitchhiker's Guide to the Galaxy", "Douglas Adams", 1979)
+    library.add_books(book1)
+    book2 = Book(123, "My Will", "Louis Mark", 1980)
+    with pytest.raises(Exception, match="Book already exists.."):
+        library.add_books(book2)
     
     
 # def test_add_book_missing_info():
