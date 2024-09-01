@@ -37,16 +37,16 @@ def test_add_multiple_books():
     assert library.books["0987654321"].title == "To Kill a Mockingbird"
     assert library.books["1122334455"].title == "1984"
     
-# @pytest.mark.parametrize("isbn, title, author, publication_year", [
-#     ("1111111111", "Book One", "Author A", 2000),
-#     ("2222222222", "Book Two", "Author B", 2010),
-#     ("3333333333", "Book Three", "Author C", 2020),
-# ])
-# def test_add_multiple_unique_books(isbn, title, author, publication_year):
-#     library = Library()
-#     book = Book(isbn, title, author, publication_year)
-#     library.add_books(book)
-#     assert library.books[isbn] == book
+@pytest.mark.parametrize("isbn, title, author, publication_year", [
+    ("1111111111", "Book One", "Author A", 2000),
+    ("2222222222", "Book Two", "Author B", 2010),
+    ("3333333333", "Book Three", "Author C", 2020),
+])
+def test_add_multiple_unique_books(isbn, title, author, publication_year):
+    library = Library()
+    book = Book(isbn, title, author, publication_year)
+    library.add_books(book)
+    assert library.books[isbn] == book
 
 # def test_borrow_book():
 #     library = Library()
