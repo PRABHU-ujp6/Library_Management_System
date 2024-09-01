@@ -63,11 +63,11 @@ def test_borrow_book_not_available():
     with pytest.raises(Exception):
         library.borrow_books("XYZ Books") 
 
-# def test_borrow_nonexistent_book():
-#     library = Library()
+def test_borrow_nonexistent_book():
+    library = Library()
     
-#     with pytest.raises(Exception):
-#         library.borrow_books("XYZ Books") 
+    with pytest.raises(Exception):
+        library.borrow_books("XYZ Books") 
         
 
 # def test_borrow_invalid_isbn():
