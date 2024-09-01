@@ -78,13 +78,13 @@ def test_borrow_invalid_isbn():
     with pytest.raises(ValueError):
         library.borrow_books("XYZ books")
         
-# def test_borrow_book_multiple_times():
-#     library = Library()
-#     book = Book("1234567890", "The Hitchhiker's Guide to the Galaxy", "Douglas Adams", 1979)
-#     library.add_books(book)
-#     library.borrow_books(book.isbn)
-#     with pytest.raises(ValueError):
-#         library.borrow_books(book.isbn)
+def test_borrow_book_multiple_times():
+    library = Library()
+    book = Book("1234567890", "The Hitchhiker's Guide to the Galaxy", "Douglas Adams", 1979)
+    library.add_books(book)
+    library.borrow_books(book.isbn)
+    with pytest.raises(ValueError):
+        library.borrow_books(book.isbn)
     
 # def test_return_book():
 #     library = Library()
